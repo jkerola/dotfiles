@@ -1,0 +1,13 @@
+font:
+  normal:
+    family: AnonymiceProNerdFontMono
+  bold:
+    family: AnonymiceProNerdFont
+    style:
+  italic:
+    family: AnonymiceProNerdFontItalic
+    style: Light Italic
+  size: 18
+
+window:
+  opacity: 0.6

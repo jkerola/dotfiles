@@ -1,0 +1,42 @@
+indicator
+indicator-caps-lock
+ignore-empty-password
+
+# Font
+font=Anonymice Pro Nerd Font
+font-size=32
+
+# Background
+color=000000
+text-color=FFFFFF
+
+#Clock
+clock
+timestr=%R
+datestr=%d/%m/%Y
+
+# Wallpaper
+scaling=center
+image=/home/janne/Pictures/wallpapers/dwarf_fortress.jpg
+indicator-x-position=2400
+indicator-y-position=200
+
+# Colors
+# Normal
+key-hl-color=b3d3e6
+line-color=29343b
+ring-color=29343b
+# verify
+ring-ver-color=000000
+line-ver-color=000000
+inside-ver-color=000000
+# Wrong
+inside-wrong-color=000000
+line-wrong-color=29343b
+ring-wrong-color=c7523e
+text-wrong-color=FFFFFF
+# Clear
+text-clear-color=FFFFFF
+line-clear-color=29343b
+ring-clear-color=f7e294
+inside-clear-color=000000
