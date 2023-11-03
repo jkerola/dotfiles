@@ -26,13 +26,14 @@
     "format": "{icon}",
     "format-icons": {
       "1": "Main",
-      "2": "Secondary",
-      "3": "Tertiary",
-      "4": "Quaternary",
-      "5": "Quinary",
+      "2": "Main",
+      "3": "Secondary",
+      "4": "Secondary",
+      "5": "Tertiary",
+      "6": "Tertiary",
       "urgent": "Urgent",
       "focused": "Focused",
-      "default": "Default"
+      "default": "Uncharted"
     },
     "persistent-workspaces": {
       "1": [

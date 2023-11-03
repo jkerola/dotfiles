@@ -1,7 +1,6 @@
 #! /bin/bash
 
-monitors="$(hyperctl monitors -j | jq length)"
-
+monitors="$(hyprctl monitors -j | jq length)"
 if [[ $monitors -ne 1 ]]; then
   hyprctl keyword monitor "eDP-1,disable"
 else
