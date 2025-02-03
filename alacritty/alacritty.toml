@@ -1,0 +1,19 @@
+[font]
+size = 18
+
+[font.bold]
+family = "AnonymiceProNerdFont"
+
+[font.italic]
+family = "AnonymiceProNerdFontItalic"
+style = "Light Italic"
+
+[font.normal]
+family = "AnonymiceProNerdFontMono"
+
+[window]
+opacity = 0.6
+
+[window.padding]
+x = 8
+y = 8
