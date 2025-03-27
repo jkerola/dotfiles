@@ -123,7 +123,8 @@
   "custom/clock": {
     "format": "{}",
     "tooltip": false,
-    "exec": "date +'%b. %d %H:%M'"
+    "exec": "date +'%b. %d %H:%M'",
+    "interval": 60
   },
   "battery": {
     "states": {
