@@ -1,2 +1,4 @@
 exec_always ~/.config/sway/scripts/clamshell.sh
 exec waybar
+exec_always autotiling
+exec_always hyprpaper

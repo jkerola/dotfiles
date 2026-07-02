@@ -5,7 +5,8 @@
   "spacing": 10,
   "modules-left": [
     "hyprland/workspaces",
-    "hyprland/window"
+    "hyprland/window",
+    "sway/workspaces",
   ],
   "modules-center": [
     "custom/clock"
@@ -19,6 +20,9 @@
     "hyprland/language",
     "battery"
   ],
+  "sway/workspaces": {
+    "all-outputs": false,
+  },
   "hyprland/workspaces": {
     "all-outputs": false,
     "on-click": "activate",
