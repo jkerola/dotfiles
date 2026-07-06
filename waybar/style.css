@@ -9,3 +9,8 @@
 window {
   background: transparent;
 }
+
+#workspaces button.visible {
+  border-bottom: 3px solid;
+  border-radius: 18px;
+}

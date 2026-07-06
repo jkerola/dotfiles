@@ -22,6 +22,9 @@
   ],
   "sway/workspaces": {
     "all-outputs": false,
+    "format-icons": {
+      "focused": ">"
+    }
   },
   "hyprland/workspaces": {
     "all-outputs": false,
