@@ -7,8 +7,8 @@ set $wallpapers ~/Pictures/config
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
-output $main position 0 0 bg $wallpapers/main/ico_B.png fill
-output $secondary position -1440 -640 transform 270 bg $wallpapers/secondary/ico_A.png fill
+output $main position 1440 640 bg $wallpapers/main/ico_B.png fill
+output $secondary position 0 0 transform 270 bg $wallpapers/secondary/ico_A.png fill
 
 workspace 1 output $main
 workspace 3 output $main
