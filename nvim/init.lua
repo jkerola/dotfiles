@@ -98,11 +98,12 @@ do
   -- Save current file
   vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save current file' })
 
-  vim.keymap.set('n', '<leader>ä', '<cmd>split<CR> | <cmd>terminal<CR>', { desc = 'Split buffer and open a new terminal instance.' })
+  vim.keymap.set({ 'n', 'v' }, '<leader>ä', '<cmd>split<CR> | <cmd>terminal<CR>', { desc = 'Split buffer and open a new terminal instance.' })
+
+  vim.keymap.set({ 'n', 'v' }, '<leader>pp', '<cmd>TypstPreview<CR>', { desc = '[T]ypst preview.' })
 
   -- [[ Basic Keymaps ]]
   --  See `:help vim.keymap.set()`
-
   -- Clear highlights on search when pressing <Esc> in normal mode
   --  See `:help hlsearch`
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -295,7 +296,15 @@ do
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
       { 'gr', group = 'LSP Actions', mode = { 'n' } },
+      { '<leader>p', group = '[P]review', mode = { 'n', 'v' } },
     },
+  }
+
+  -- Typst Web Preview
+  vim.pack.add { { src = 'https://github.com/chomosuke/typst-preview.nvim', lazy = false } }
+
+  require('typst-preview').setup {
+    open_cmd = 'firefox --private-window %s',
   }
 
   -- [[ Colorscheme ]]
@@ -623,6 +632,7 @@ do
     stylua = {}, -- Used to format Lua code
     pyright = {},
     ruff = {},
+    tinymist = { settings = { exportPdf = false } },
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
