@@ -98,8 +98,7 @@ do
   -- Save current file
   vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save current file' })
 
-  -- Bind Escape to Capslock
-  -- vim.keymap.set('n', '<Capslock>', '<Esc>')
+  vim.keymap.set('n', '<leader>ä', '<cmd>split<CR> | <cmd>terminal<CR>', { desc = 'Split buffer and open a new terminal instance.' })
 
   -- [[ Basic Keymaps ]]
   --  See `:help vim.keymap.set()`
@@ -305,10 +304,7 @@ do
   -- change the command under that to load whatever the name of that colorscheme is.
   --
   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-
   vim.pack.add { gh 'mofiqul/vscode.nvim' }
-  -- vim.pack.add { gh 'folke/tokyonight.nvim' }
-  -- vim.pack.add {{ src = "https://github.com/catppuccin/nvim", name="catppuccin" }}
 
   -- Load the colorscheme here.
   -- Like many other themes, this one has different styles, and you could load
@@ -703,18 +699,7 @@ do
   vim.pack.add { gh 'stevearc/conform.nvim' }
   require('conform').setup {
     notify_on_error = false,
-    format_on_save = function(bufnr)
-      -- You can specify filetypes to autoformat on save here:
-      local enabled_filetypes = {
-        lua = true,
-        python = true,
-      }
-      if enabled_filetypes[vim.bo[bufnr].filetype] then
-        return { timeout_ms = 500 }
-      else
-        return nil
-      end
-    end,
+    format_on_save = function() return { timeout_ms = 500 } end,
     default_format_opts = {
       lsp_format = 'fallback', -- Use external formatters if configured below, otherwise use LSP formatting. Set to `false` to disable LSP formatting entirely.
     },
@@ -726,6 +711,11 @@ do
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      typescript = { 'prettier' },
+      markdown = { 'prettier' },
+      css = { 'prettier' },
+      html = { 'prettier' },
+      javascript = { 'prettier' },
     },
   }
 
