@@ -4,4 +4,6 @@ exec_always hyprpaper
 
 exec waybar
 exec prospect-mail
+exec telegram-desktop
+exec discord
 
